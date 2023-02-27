@@ -1,4 +1,4 @@
-from django.shortcuts import HttpResponse
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -7,4 +7,5 @@ from django.shortcuts import HttpResponse
 # 2. Function-Based views
 # 3. Generic Class-Based views
 def homePageView(request):
-    return HttpResponse("Hello, world!")
+    content = "Hello, world!"
+    return HttpResponse(content.encode('utf-8')) 
